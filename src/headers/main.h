@@ -5,6 +5,8 @@
 #include <stdlib.h>
 #include <string.h>
 #include <limits.h>
+#include <ctype.h>
+
 
 // Yes I Know
 #define BUFSIZE 600000

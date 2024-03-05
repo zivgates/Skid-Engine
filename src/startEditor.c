@@ -15,6 +15,8 @@ static void printStarting(){
 
 
 static void printPrompts(){
+
+    puts("--------------------------");
     puts("(1): Kill A Process");
     puts("(2): Print Something");
     puts("(3): Delete A File");
@@ -22,6 +24,8 @@ static void printPrompts(){
     puts("(5): Write Batch File");
     puts("(6): Exit Engine");
     puts("(7): Print Current File");
+    puts("---------------------------");
+
 }
 
 

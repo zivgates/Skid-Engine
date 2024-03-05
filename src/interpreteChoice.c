@@ -37,6 +37,8 @@ void choice(int choice, data* data){
             break;
         case 5:
             writeToFile(data);
+            clrscr();
+            puts("Written File");
             break;
         case 6:
             ExitProcess(0);
