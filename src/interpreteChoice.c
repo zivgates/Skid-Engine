@@ -76,6 +76,12 @@ void choice(int choice, data* data){
             //Sleep(3000);
             clrscr();
             break;
+        case 11:
+            input = prompt("Enter Custom Commands");
+            editBuffer(data, input);
+            //Sleep(3000);
+            free(input);
+            clrscr();
         default:
             // when incorrect
             clrscr();

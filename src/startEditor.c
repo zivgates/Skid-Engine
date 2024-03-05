@@ -5,7 +5,7 @@
 static void printStarting(){
     puts("---------------------------------------------------");
     printf("| Skid-Engine Version %0.1f                         |\n", VER);
-    printf("| Copyright ZivGates, All Rights Reserved     |\n");
+    printf("| Copyright ZivGates, All Rights Reserved         |\n");
     puts("---------------------------------------------------");
 
 
@@ -22,6 +22,7 @@ static void printPrompts(){
     puts("| (5):  Write Batch File     | (6):  Exit Engine        |");
     puts("| (7):  Print Current File   | (8):  Create File        |");
     puts("| (9):  Create Directory     | (10): Pause The Malware  |");
+    puts("|             (11):  Type Custom Command                |");
     puts("---------------------------------------------------------");
 
 }
@@ -38,11 +39,11 @@ restartLoop:
     // This is just boilerplate for the file
         switch(i){
             case 0:
-                editBuffer(data, "rem Skid-Engine Batch Malware File\n\n");
+                editBuffer(data, "@echo off\n\n");
                 i++;
                 goto restartLoop;
             case 1:
-                editBuffer(data, "@echo off\n");
+                editBuffer(data, "rem Skid-Engine Batch Malware File\n");
                 i++;
                 goto restartLoop;
             case 2:
