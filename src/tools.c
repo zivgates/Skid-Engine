@@ -1,7 +1,7 @@
 #include "headers/tools.h"
 
 
-
+// Clears Screen
 static void cls(HANDLE hConsole)
 {
     CONSOLE_SCREEN_BUFFER_INFO csbi;

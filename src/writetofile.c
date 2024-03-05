@@ -3,7 +3,7 @@
 
 
 
-
+// This writes to the file by checking if it doesn't end by .bat, if it doesn't it adds it and creates a file and writes to it.
 BOOL writeToFile(data* data){
     int i = strlen(data->fileName);
     char buffer[BUFSIZE];

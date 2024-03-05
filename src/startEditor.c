@@ -1,11 +1,11 @@
 #include "headers/startEditor.h"
 
 
-
+// Prints the Startup Prompt With the version and a warning
 static void printStarting(){
     puts("---------------------------------------------------");
     printf("| Skid-Engine Version %0.1f                         |\n", VER);
-    printf("| Copyright ZivGates LLC, All Rights Reserved     |\n");
+    printf("| Copyright ZivGates, All Rights Reserved     |\n");
     puts("---------------------------------------------------");
 
 
@@ -13,7 +13,7 @@ static void printStarting(){
 
 }
 
-
+// Prints Options
 static void printPrompts(){
 
     puts("--------------------------");
@@ -29,13 +29,15 @@ static void printPrompts(){
 }
 
 
-
+// The engine core
 void engineMain(data* data){
     clrscr();
     printStarting();
+    // Counter
     int i = 0;
     while(1){
 restartLoop:
+    // This is just boilerplate for the file
         switch(i){
             case 0:
                 editBuffer(data, "rem Skid-Engine Batch Malware File\n\n");
@@ -55,7 +57,9 @@ restartLoop:
                 goto restartLoop;
             
         }
+        // this prints the prompts
         printPrompts();
+        // asks for choices and interpertes it
         int result = numberPrompt("Whats Your Choice?");
         choice(result, data);
     }

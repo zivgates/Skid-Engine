@@ -1,7 +1,7 @@
 #include "headers/writeBuffer.h"
 
 
-
+// This edits the buffer in the struct data
 BOOL editBuffer(data* data, char* stringToAdd){
     if(!stringToAdd) return FALSE;
     int lineNumber = strlen(stringToAdd);
@@ -18,6 +18,7 @@ BOOL editBuffer(data* data, char* stringToAdd){
     return TRUE;
 }
 
+// this edits it from within, can be used for debugging
 BOOL editBufferWithin(data* data){
     if(!data->lineToWrite) return FALSE;
     int lineNumber = strlen(data->lineToWrite);

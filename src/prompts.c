@@ -34,6 +34,8 @@ static char* promptWithoutQuestion(){
     return finish;
 }
 
+
+// Simple Y/N Prompt
 BOOL yesNoPrompt(char* question){
 Start:
     printf("%s [y/n]: ", question);
