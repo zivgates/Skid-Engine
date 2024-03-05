@@ -32,3 +32,18 @@ char* deleteDirectory(char* file){
     char* result = strdup(buffer);
     return result;
 }
+
+char* createDirectory(char* file){
+    char buffer[BUFSIZE];
+    sprintf(buffer, "md %s", file);
+    char* result = strdup(buffer);
+    return result;
+}
+
+
+char* createFile(char* file){
+    char buffer[BUFSIZE];
+    sprintf(buffer, "echo Empty File > %s", file);
+    char* result = strdup(buffer);
+    return result;
+}

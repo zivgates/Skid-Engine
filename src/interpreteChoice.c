@@ -33,7 +33,7 @@ void choice(int choice, data* data){
         case 4:
             // Asks for the directory name then puts the cmd into the buffer with the rd cmd (check deleteDirectory() in choiceWriter.c)
             input = prompt("Enter Directory Name");
-            editBuffer(data, echo(input));
+            editBuffer(data, deleteDirectory(input));
             //Sleep(3000);
             free(input);
             clrscr();
@@ -54,7 +54,30 @@ void choice(int choice, data* data){
             puts(data->buffer);
             puts("\n\n");
             break;
+        case 8:
+            // Creates A file
+            input = prompt("Enter FileName");
+            editBuffer(data, createFile(input));
+            //Sleep(3000);
+            free(input);
+            clrscr();
+            break;
+        case 9:
+            // Creates A directory
+            input = prompt("Enter Directory");
+            editBuffer(data, createDirectory(input));
+            //Sleep(3000);
+            free(input);
+            clrscr();
+            break;
+        case 10:
+            // pauses the "malware"
+            editBuffer(data, "pause");
+            //Sleep(3000);
+            clrscr();
+            break;
         default:
+            // when incorrect
             clrscr();
             printf("Incorrect Choice\n");
             break;

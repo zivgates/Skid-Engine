@@ -16,15 +16,13 @@ static void printStarting(){
 // Prints Options
 static void printPrompts(){
 
-    puts("--------------------------");
-    puts("(1): Kill A Process");
-    puts("(2): Print Something");
-    puts("(3): Delete A File");
-    puts("(4): Delete A Directory");
-    puts("(5): Write Batch File");
-    puts("(6): Exit Engine");
-    puts("(7): Print Current File");
-    puts("---------------------------");
+    puts("---------------------------------------------------------");
+    puts("| (1):  Kill A Process       | (2):  Print Something    |");
+    puts("| (3):  Delete A File        | (4):  Delete A Directory |");
+    puts("| (5):  Write Batch File     | (6):  Exit Engine        |");
+    puts("| (7):  Print Current File   | (8):  Create File        |");
+    puts("| (9):  Create Directory     | (10): Pause The Malware  |");
+    puts("---------------------------------------------------------");
 
 }
 
