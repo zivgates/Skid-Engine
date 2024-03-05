@@ -11,7 +11,6 @@ void choice(int choice, data* data){
             //Sleep(3000);
             free(input);
             clrscr();
-
             break;
         case 2:
             input = prompt("Enter What You Want To Print");
@@ -51,7 +50,5 @@ void choice(int choice, data* data){
             printf("Incorrect Choice\n");
             break;
     }
-
-
-    
+    editBuffer(data, "\n");
 }
